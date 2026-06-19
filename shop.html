@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Aura Modern Clothing</title>
+    <meta name="description" content="Shop all collections including men's, women's, and accessories at Aura.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">AURA.</a>
+            <nav class="nav-links">
+                <a href="shop.html?category=men">Men</a>
+                <a href="shop.html?category=women">Women</a>
+                <a href="shop.html?category=accessories">Accessories</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <button class="cart-btn" aria-label="Open cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>All Products</h1>
+            <p>Discover our complete collection of modern essentials.</p>
+        </div>
+    </div>
+
+    <main class="container shop-layout section-padding">
+        <!-- Sidebar Filters -->
+        <aside class="shop-sidebar">
+            <div class="filter-group">
+                <h3>Category</h3>
+                <ul class="filter-list">
+                    <li>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="category" value="men">
+                            <span class="checkbox-custom"></span>
+                            Men's
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="category" value="women">
+                            <span class="checkbox-custom"></span>
+                            Women's
+                        </label>
+                    </li>
+                    <li>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="category" value="accessories">
+                            <span class="checkbox-custom"></span>
+                            Accessories
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="filter-group">
+                <h3>Size</h3>
+                <div class="size-grid">
+                    <button class="size-btn">XS</button>
+                    <button class="size-btn">S</button>
+                    <button class="size-btn">M</button>
+                    <button class="size-btn">L</button>
+                    <button class="size-btn">XL</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Color</h3>
+                <div class="color-grid">
+                    <button class="color-btn" style="background-color: #111;" aria-label="Black"></button>
+                    <button class="color-btn" style="background-color: #f4f4f4; border: 1px solid #ccc;" aria-label="White"></button>
+                    <button class="color-btn" style="background-color: #8b9298;" aria-label="Grey"></button>
+                    <button class="color-btn" style="background-color: #c9a77e;" aria-label="Tan"></button>
+                    <button class="color-btn" style="background-color: #2c3e50;" aria-label="Navy"></button>
+                    <button class="color-btn" style="background-color: #5c6c5b;" aria-label="Olive"></button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3>Price</h3>
+                <div class="price-range">
+                    <input type="range" min="0" max="300" value="300" class="range-slider">
+                    <div class="price-labels">
+                        <span>$0</span>
+                        <span>$300+</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Product Grid -->
+        <section class="shop-products">
+            <div class="shop-controls">
+                <p>Showing 6 results</p>
+                <div class="sort-dropdown">
+                    <select aria-label="Sort products">
+                        <option value="featured">Featured</option>
+                        <option value="new">New Arrivals</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid shop-grid">
+                <!-- Products will be injected dynamically by shop.js -->
+            </div>
+            
+            <div class="pagination">
+                <button class="btn btn-secondary">Load More</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>AURA.</h2>
+                <p>Modern clothing for the contemporary lifestyle. Minimalist design, maximal quality.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                    <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h3>Join Our Newsletter</h3>
+                <p>Get 10% off your first order and exclusive updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" aria-label="Email" required>
+                    <button type="submit" class="btn btn-secondary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Aura Clothing. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer Placeholder -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <!-- Will be populated by JS later -->
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>
